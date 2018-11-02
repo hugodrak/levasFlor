@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 
 # Gems used by all environments (development, production & test)
 gem 'nokogiri'
-gem 'sinatra'
+gem "sinatra", ">= 2.0.2"
 gem 'sinatra-flash'
 gem 'sinatra-partial'
 gem 'sinatra-contrib'
