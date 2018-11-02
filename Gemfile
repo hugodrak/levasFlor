@@ -26,6 +26,7 @@ gem 'httparty'
 gem 'byebug'
 gem 'rake'
 gem 'pony'
+gem "ffi", ">= 1.9.24"
 
 
 
