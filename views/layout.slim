@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    script src="/js/jquery-3.3.1.js"
+    link rel="stylesheet" type="text/css" href="/css/new.css"
+    link rel="stylesheet" type="text/css" href="/css/table.css"
+    script type="text/javascript" charset="utf-8" src="/js/main.js"
+    link rel="icon" href="/img/logos/levas.ico" type="image/x-icon"
+    / link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"
+
+    title
+      = {en: "LevasFlor – Sustainable timber", pt: "LevasFlor - Madeira sustentável", sv: "LevasFlor - Hållbart trä"}[:"#{session[:lang]}"]
+      / = @title[:"#{session[:lang]}"]
+    / title LevasFlor – Sustainable timber
+  body
+
+    == yield
+
+    footer.footer
+      img.footer_image alt="FSC" src="/img/logos/FSC.jpg"
+
+      .flags
+        a.lang href="/en"
+          img src="/img/symbols/en.png"
+        a.lang href="/pt"
+          img src="/img/symbols/pt.png"
+        a.lang href="/sv"
+          img src="/img/symbols/sv.png"

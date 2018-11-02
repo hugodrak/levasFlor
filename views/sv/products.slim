@@ -1,0 +1,27 @@
+nav.nav_desktop
+  .burger_menu onclick="toggleNav()"
+  a.nav_item_desktop href="/" Hem
+  a.nav_item_desktop.left href="/products"  Produkter
+  a.nav_item_desktop.right href="/woods"  Vårat trä
+  a.nav_item_desktop href="/about"  Om
+
+nav.sidenav
+  a.nav_item_mobile href="/" Hem
+  a.nav_item_mobile href="/products"  Produkter
+  a.nav_item_mobile href="/woods"  Vårat trä
+  a.nav_item_mobile href="/about"  Om
+
+section.content
+  h1.title Products
+  h3.title Produced with care from a sustainable managed forests in Mozambique, we offer a range of unique and beautiful african hardwoods
+  .product_box
+    - @products.each do |item|
+      .product
+        - if item.imgurl != "" && item.imgurl != nil
+          img src="/img/products/#{item.imgurl}"
+        - else
+          img src="/img/picture_comming.png"
+        a href="/en/products/#{item.id}"
+          h2.title = item.name
+
+        p = item.bio

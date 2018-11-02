@@ -1,0 +1,80 @@
+.main
+  h1 Editor
+  form method="post" action="/editor/logout"
+    button type="submit" Log Out
+
+  h3 Index page
+  #index_edit
+    - path = './views/en/index.slim'
+	.text_box
+      textarea#index_en cols="200vw" rows="50vh"
+      	- File.open(path, 'r').to_a.each do |row|
+      	  = row
+		button onClick="updateText('index_en')" = 'save'
+
+		/ .text_box
+		/ 	textarea#index_pt cols="200vw" rows="50vh"
+		/ 		- File.open(path, 'r').to_a.each do |row|
+		/ 			= row
+		/
+		/ 	button onClick="updateText('index_pt')" Save
+		/
+		/ .text_box
+		/ 	textarea#index_sv cols="200vw" rows="50vh"
+		/ 		- File.open(path, 'r').to_a.each do |row|
+		/ 			= row
+		/
+		/ 	button onClick="updateText('index_sv')" Save
+
+
+  h3 Woods db
+
+  select onChange="selectWood(this.value)"
+    option disabled="" selected="" id="emptopt" Select wood to edit
+    option value="new" Create New
+    - @wood.each do |wood|
+      option value="#{wood.id}" = "#{wood.lang + ' - ' + wood.name}"
+
+  form.woodForm method="post" action="/editor/woods"
+    p ID:
+    input type="hidden" name="id"
+    p Img url:
+    input type="text" name="imgurl"
+    p Name:
+    input type="text" name="name" required=""
+    p Latin:
+    input type="text" name="name_latin"
+    p Biography:
+    input type="text" name="bio"
+    p Heartwood:
+    input type="text" name="heartwood"
+    p Sapwood:
+    input type="text" name="sapwood"
+    p Density:
+    input type="text" name="density"
+    p Silica content:
+    input type="text" name="silica"
+    p Tangelical shrinkage:
+    input type="text" name="tangshrink"
+    p Radial shrinkage:
+    input type="text" name="radshrink"
+    p Movement:
+    input type="text" name="movement"
+    p Texture:
+    input type="text" name="texture"
+    p Workability:
+    input type="text" name="workable"
+    p Rapture:
+    input type="text" name="rapture"
+    p Elasticity:
+    input type="text" name="elasticity"
+    p Crush:
+    input type="text" name="crush"
+    p Sheer:
+    input type="text" name="sheer"
+    p Purpose:
+    input type="text" name="purpose"
+    p Language:
+    input type="text" name="lang" required=""
+
+    button type="submit" Save Changes

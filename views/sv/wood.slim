@@ -1,0 +1,38 @@
+nav.nav_desktop
+  .burger_menu onclick="toggleNav()"
+  a.nav_item_desktop href="/" Hem
+  a.nav_item_desktop.left href="/products"  Produkter
+  a.nav_item_desktop.right href="/woods"  Vårat trä
+  a.nav_item_desktop href="/about"  Om
+
+nav.sidenav
+  a.nav_item_mobile href="/" Hem
+  a.nav_item_mobile href="/products"  Produkter
+  a.nav_item_mobile href="/woods"  Vårat trä
+  a.nav_item_mobile href="/about"  Om
+
+section.content
+  - @woods= Woods.all()
+  - @wood = Woods.all(:id => params[:id].to_i)[0]
+  - @properties = WoodLabels.all
+
+  h1.title = @wood.name
+  h3.title = @wood.name_latin
+  p.title = @wood.bio
+
+  table#wood_table
+    - @properties.each do |prop|
+      - value = @wood.send(prop.alias)
+
+      tr
+        td = prop.send("description_#{session[:lang]}")
+        td = value.to_s + " " + prop.suffix.to_s
+
+  .select
+    img#coladd src="/img/symbols/add.png" onClick="document.querySelector('#woodselect').style = 'display: block;'"
+
+    select#woodselect onchange="compareWood(this);" style="display:none;"
+      option disabled="" selected="" id="emptopt" Select wood to compare
+      - @woods.each do |wood|
+        - if wood.name != @wood.name
+          option value="#{wood.id}" = wood.name

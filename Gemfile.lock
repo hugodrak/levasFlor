@@ -1,0 +1,169 @@
+GIT
+  remote: git://github.com/alexch/rerun.git
+  revision: d9e3c160624be1b251dddf6156d7c95c752c60bf
+  specs:
+    rerun (0.13.0)
+      listen (~> 3.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.5.2)
+      public_suffix (>= 2.0.2, < 4.0)
+    backports (3.11.3)
+    bcrypt (3.1.11)
+    bcrypt-ruby (3.1.5)
+      bcrypt (>= 3.1.3)
+    byebug (10.0.2)
+    data_mapper (1.2.0)
+      dm-aggregates (~> 1.2.0)
+      dm-constraints (~> 1.2.0)
+      dm-core (~> 1.2.0)
+      dm-migrations (~> 1.2.0)
+      dm-serializer (~> 1.2.0)
+      dm-timestamps (~> 1.2.0)
+      dm-transactions (~> 1.2.0)
+      dm-types (~> 1.2.0)
+      dm-validations (~> 1.2.0)
+    data_objects (0.10.17)
+      addressable (~> 2.1)
+    dm-aggregates (1.2.0)
+      dm-core (~> 1.2.0)
+    dm-constraints (1.2.0)
+      dm-core (~> 1.2.0)
+    dm-core (1.2.1)
+      addressable (~> 2.3)
+    dm-do-adapter (1.2.0)
+      data_objects (~> 0.10.6)
+      dm-core (~> 1.2.0)
+    dm-migrations (1.2.0)
+      dm-core (~> 1.2.0)
+    dm-serializer (1.2.2)
+      dm-core (~> 1.2.0)
+      fastercsv (~> 1.5)
+      json (~> 1.6)
+      json_pure (~> 1.6)
+      multi_json (~> 1.0)
+    dm-sqlite-adapter (1.2.0)
+      dm-do-adapter (~> 1.2.0)
+      do_sqlite3 (~> 0.10.6)
+    dm-timestamps (1.2.0)
+      dm-core (~> 1.2.0)
+    dm-transactions (1.2.0)
+      dm-core (~> 1.2.0)
+    dm-types (1.2.2)
+      bcrypt-ruby (~> 3.0)
+      dm-core (~> 1.2.0)
+      fastercsv (~> 1.5)
+      json (~> 1.6)
+      multi_json (~> 1.0)
+      stringex (~> 1.4)
+      uuidtools (~> 2.1)
+    dm-validations (1.2.0)
+      dm-core (~> 1.2.0)
+    do_sqlite3 (0.10.17)
+      data_objects (= 0.10.17)
+    faraday (0.12.2)
+      multipart-post (>= 1.2, < 3)
+    fastercsv (1.5.5)
+    ffi (1.9.23)
+    httparty (0.16.2)
+      multi_xml (>= 0.5.2)
+    json (1.8.6)
+    json_pure (1.8.6)
+    jwt (1.5.6)
+    listen (3.1.5)
+      rb-fsevent (~> 0.9, >= 0.9.4)
+      rb-inotify (~> 0.9, >= 0.9.7)
+      ruby_dep (~> 1.2)
+    mail (2.7.0)
+      mini_mime (>= 0.1.1)
+    mini_mime (1.0.0)
+    mini_portile2 (2.3.0)
+    multi_json (1.13.1)
+    multi_xml (0.6.0)
+    multipart-post (2.0.0)
+    mustermann (1.0.2)
+    nokogiri (1.8.2)
+      mini_portile2 (~> 2.3.0)
+    oauth2 (1.4.0)
+      faraday (>= 0.8, < 0.13)
+      jwt (~> 1.0)
+      multi_json (~> 1.3)
+      multi_xml (~> 0.5)
+      rack (>= 1.2, < 3)
+    openssl (2.1.0)
+    pony (1.12)
+      mail (>= 2.0)
+    public_suffix (3.0.2)
+    rack (2.0.4)
+    rack-protection (2.0.1)
+      rack
+    rack-rewrite (1.5.1)
+    rack-ssl-enforcer (0.2.9)
+    rake (12.3.0)
+    rb-fsevent (0.10.3)
+    rb-inotify (0.9.10)
+      ffi (>= 0.5.0, < 2)
+    ruby_dep (1.5.0)
+    sinatra (2.0.1)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.1)
+      tilt (~> 2.0)
+    sinatra-contrib (2.0.1)
+      backports (>= 2.0)
+      multi_json
+      mustermann (~> 1.0)
+      rack-protection (= 2.0.1)
+      sinatra (= 2.0.1)
+      tilt (>= 1.3, < 3)
+    sinatra-default_charset (0.2.0)
+      sinatra (>= 1.0)
+    sinatra-flash (0.3.0)
+      sinatra (>= 1.0.0)
+    sinatra-partial (1.0.1)
+      sinatra (>= 1.4)
+    slim (3.0.9)
+      temple (>= 0.7.6, < 0.9)
+      tilt (>= 1.3.3, < 2.1)
+    stringex (1.5.1)
+    temple (0.8.0)
+    tilt (2.0.8)
+    uuidtools (2.1.5)
+    webrick (1.4.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bcrypt
+  byebug
+  data_mapper
+  dm-aggregates
+  dm-migrations
+  dm-serializer
+  dm-sqlite-adapter
+  dm-timestamps
+  dm-types
+  httparty
+  json
+  nokogiri
+  oauth2
+  openssl
+  pony
+  rack
+  rack-rewrite
+  rack-ssl-enforcer
+  rake
+  rerun!
+  sinatra
+  sinatra-contrib
+  sinatra-default_charset
+  sinatra-flash
+  sinatra-partial
+  slim
+  webrick
+
+BUNDLED WITH
+   1.16.1

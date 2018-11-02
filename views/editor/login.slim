@@ -1,0 +1,13 @@
+.main
+  form method="get" action="/"
+    button type="submit" To Main Page
+  form.loginform method="post" action="/editor/login"
+    h1 Editor Login
+    input type="text" name="username" placeholder="Username:"
+    input type="password" name="password" placeholder="Password:"
+    button type="submit" Login
+  button onClick="document.querySelector('#resetpassword').style.display = 'block'" Forgot Password?
+
+  form#resetpassword method="post" action="/editor/resetpassword" style="display:none;"
+    input type="text" name="username" placeholder="Username:"
+    button type="submit" Reset Password
