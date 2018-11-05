@@ -544,4 +544,15 @@ select {
     .footer .lang img{
         width: 2vw;
     }
+		/*----------About----------------*/
+		.person img{
+			width: 10em;
+			border-radius: 1em;
+		}
+
+		.person{
+			text-align: center;
+		}
+
+
 }

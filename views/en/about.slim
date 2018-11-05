@@ -31,5 +31,12 @@ section.content
     strong Address (sawmill carpentry):
     |  EN 213, Condue, Cheringoma
   br
-  p
-    strong A group of social entrepreneurs, owns Levasflor to 90%. The Anglican Church in Mozambique, namely the Diocese of Lebombo, owns the remaining 10%. Levasflor is the result of collaboration between the two, with the deeper purpose of poverty alleviation through the creation of a sustainable wood industry.
+
+	p
+		strong A group of social entrepreneurs, owns Levasflor to 90%. The Anglican Church in Mozambique, namely the Diocese of Lebombo, owns the remaining 10%. Levasflor is the result of collaboration between the two, with the deeper purpose of poverty alleviation through the creation of a sustainable wood industry.
+	h1 Our Personel
+	.personel
+		.person
+			- Personel.each do |person|
+				img src="#{person.imgurl}"
+				h3 = person.name

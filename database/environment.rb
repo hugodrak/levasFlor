@@ -63,6 +63,13 @@ class Editors
   property :last_login, String
 end
 
+class Personel
+	include DataMapper::Resource
+	property :id, Serial, :key => true
+	property :name, String
+	property :imgurl, String
+end
+
 
 DataMapper.finalize
 DataMapper.auto_upgrade!
